@@ -41,6 +41,16 @@
             }
             */
         
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+        
+        html {
+            box-sizing: border-box;
+        }
+        
         .button {
             display: inline-block;
             padding: 10px 30px;
@@ -125,16 +135,6 @@
         
         ul {
             list-style: none;
-        }
-        
-        *,
-        *::before,
-        *::after {
-            box-sizing: inherit;
-        }
-        
-        html {
-            box-sizing: border-box;
         }
         
         .content-box-component {
@@ -1349,6 +1349,7 @@ input:required {}
         .clip_exampl2__items {
             position: relative;
             margin: 10px 0;
+            list-style-image: url("/img/like.svg");
         }
         
         .clip_exampl2__items:before {
@@ -1716,4 +1717,90 @@ input:required {}
                 width: 150px;
                 height: 60px; */
             transform: scaleX(1.2) scaleY(1.2);
+        }
+        
+        .toxic_markers {
+            list-style: none;
+            /* отключили стандартные буллиты */
+        }
+        
+        .toxic_markers__item {
+            position: relative;
+            width: 600px;
+            height: 80px;
+            padding-left: 100px;
+            margin-bottom: 20px;
+            font-family: "Montserrat", "Arial", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 80px;
+            color: #333333;
+            background-color: #e8e8e8;
+        }
+        
+        .toxic_markers__item::before {
+            content: "\2623";
+            /* подключили буллиты в юникоде */
+            position: absolute;
+            top: -30px;
+            left: -50px;
+            display: inline-block;
+            /* их нужно стилизовать, в том числе указывать отступы */
+            width: 85px;
+            height: 85px;
+            margin: 27px;
+            font-size: 55px;
+            font-weight: 800;
+            line-height: 80px;
+            text-align: center;
+            color: white;
+            background-color: #333333;
+            border-radius: 50%;
+        }
+        
+        .games_counter {
+            font-size: 36px;
+            line-height: 1.4;
+        }
+        
+        .games_counter__title {
+            margin: 10px 0;
+            padding-left: 56px;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+        
+        .games_counter__text {
+            margin: 0;
+        }
+        
+        .games_counter__items {
+            max-width: 600px;
+            padding: 0;
+            margin: 0;
+            counter-reset: list-counter;
+            list-style: none;
+        }
+        
+        .games_counter__item {
+            position: relative;
+            counter-increment: list-counter;
+            margin-bottom: 32px;
+        }
+        
+        .games_counter__item::before {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            left: 0;
+            top: 0;
+            content: "0" counter(list-counter);
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 1.2;
+            text-align: center;
+            color: #ffffff;
+            background-color: #ffad0f;
+            border-radius: 4px;
         }
