@@ -1,0 +1,177 @@
+    .auto_counter ol {
+        list-style: none;
+        counter-reset: outline;
+        padding-left: 32px;
+    }
+    
+    .auto_counter ol li {
+        counter-increment: outline;
+    }
+    
+    .auto_counter ol li::before {
+        content: counters(outline, ".") ". ";
+        /* Добавляем значения всех уровней вложенности, используя разделитель '.' */
+    }
+    
+    .auto_counter a {
+        text-decoration: none;
+        font-family: "Montserrat", "Arial", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #0083ff;
+    }
+    
+    .auto_counter a:visited {
+        color: #8d00bf;
+    }
+    
+    .auto_counter a:hover {
+        color: #0063bf;
+        border-bottom: 1px solid #0063bf;
+        cursor: pointer;
+    }
+    
+    .auto_counter a:active {
+        padding: 10px;
+        border: 2px solid rgba(0, 131, 255, 0.4);
+        box-sizing: border-box;
+        border-radius: 2px;
+    }
+    
+    .toxic_markers {
+        list-style: none;
+        /* отключили стандартные буллиты */
+    }
+    
+    .toxic_markers__item {
+        position: relative;
+        width: 600px;
+        height: 80px;
+        padding-left: 100px;
+        margin-bottom: 20px;
+        font-family: "Montserrat", "Arial", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 80px;
+        color: #333333;
+        background-color: #e8e8e8;
+    }
+    
+    .toxic_markers__item::before {
+        content: "\2623";
+        /* подключили буллиты в юникоде */
+        position: absolute;
+        top: -30px;
+        left: -50px;
+        display: inline-block;
+        /* их нужно стилизовать, в том числе указывать отступы */
+        width: 85px;
+        height: 85px;
+        margin: 27px;
+        font-size: 55px;
+        font-weight: 800;
+        line-height: 80px;
+        text-align: center;
+        color: white;
+        background-color: #333333;
+        border-radius: 50%;
+    }
+    
+    .games_counter {
+        font-size: 36px;
+        line-height: 1.4;
+    }
+    
+    .games_counter__title {
+        margin: 10px 0;
+        padding-left: 56px;
+        font-size: 24px;
+        line-height: 1.5;
+    }
+    
+    .games_counter__text {
+        margin: 0;
+    }
+    
+    .games_counter__items {
+        max-width: 600px;
+        padding: 0;
+        margin: 0;
+        counter-reset: list-counter;
+        list-style: none;
+    }
+    
+    .games_counter__item {
+        position: relative;
+        counter-increment: list-counter;
+        margin-bottom: 32px;
+    }
+    
+    .games_counter__item::before {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: 0;
+        top: 0;
+        content: "0" counter(list-counter);
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 1.2;
+        text-align: center;
+        color: #ffffff;
+        background-color: #ffad0f;
+        border-radius: 4px;
+    }
+    
+    .example_counter2__items {
+        margin: 0;
+        padding: 30px;
+        list-style: none;
+        font-family: "Montserrat", "Arial", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+    }
+    
+    .example_counter2__items-counter {
+        counter-reset: li;
+    }
+    
+    .example_counter2-item {
+        position: relative;
+        margin: 0 0 40px 2em;
+        padding: 8px 16px;
+        width: 522px;
+        counter-increment: li;
+        font-size: 24px;
+        line-height: 32px;
+        color: #333333;
+        border-bottom: 2px solid #39b54a;
+    }
+    
+    .example_counter2-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .example_counter2-item::before {
+        position: absolute;
+        top: -10px;
+        left: -1.5em;
+        width: 60px;
+        height: 60px;
+        content: counter(li);
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 60px;
+        text-align: center;
+        color: #ffffff;
+        background-color: #39b54a;
+    }
+    
+    .example_counter2__note {
+        font-size: 24px;
+        margin-left: 100px;
+        background-color: aqua;
+    }

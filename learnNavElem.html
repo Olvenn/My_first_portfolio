@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="learnNavElem.css"> learnNavElem
+    <title>Портфолио Junior верстальщика</title>
+    <meta name="keywords" content="Портфолио веб-разработчика, HTML, CSS, JavaScript">
+    <meta name="description" content="Предлагаю услуги по веб-разработке">
+</head>
+
+<body>
+    <nav main-header__nav main-nav>
+        <ul class="main-nav__items">
+            <li class="main-nav__item">
+                <a class="main-nav__link" href="index.html">Home</a>
+            </li>
+            <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Немного о себе</a>
+            </li>
+            <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Навыки</a>
+            </li>
+            <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Портфолио</a></li>
+            <li class="main-nav__item">
+                <a href="#">Контакты</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="my_html.html">cheatSheet</a>
+            </li>
+            <li class="main-nav__item learnNavElem">
+                <a href="learnNavElem.html">learnNavElem</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="footnotes-top">
+        <p class="footnotes-top-text">Повысьте юзабильность<sup><a href="#footnote-usability" id="ref-usability">1 (сноскa)<a></sup> текстовых элементов — помогите пользователю продраться через ваш текст.</p>
+
+        <section class="footnotes">
+            <p><a id="footnote-usability">1</a> — удобство для пользователя. <sup><a href="#ref-usability">обратно к материалу<a></sup>
+        </section>
+
+        <!-- CSS-свойство content для псевдоэлемента ::before
+    - свойство counter-reset: outline; сбрасывает (инициализирует) значение счётчика и даёт ему имя outline;
+    - свойство counter-increment: outline; — инкрементирует (увеличивает) счётчики (включая счётчики для вложенных списков);
+    - свойство content: counters(outline, ".") ". "; — добавляет с помощью counters(outline, ".") значения списков всех уровней вложенности, используя разделитель .. Строка с полученным номером «склеивается» со строкой ". " (точка и пробел), тем самым получаем номер вида: 3.2.1. Раздел 3.2.1. -->
+
+        <section class="auto_counter">
+            <ol>
+                <li><a href="#">Раздел 1</a></li>
+                <li><a href="#">Раздел 2</a></li>
+                <li><a href="#">Раздел 3</a>
+                    <ol>
+                        <li><a href="#">Раздел 3.1</a></li>
+                        <li><a href="#">Раздел 3.2</a>
+                            <ol>
+                                <li><a href="#">Раздел 3.2.1</a></li>
+                                <li><a href="#">Раздел 3.2.2</a></li>
+                                <li><a href="#">Раздел 3.2.3</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Раздел 3.3</a></li>
+                    </ol>
+                </li>
+                <li><a href="#">Раздел 4</a></li>
+                <li><a href="#">Раздел 5</a>
+                    <ol>
+                        <li><a href="#">Раздел 5.1</a></li>
+                        <li><a href="#">Раздел 5.2</a></li>
+                        <li><a href="#">Раздел 5.3</a></li>
+                    </ol>
+                </li>
+                <li><a href="#">Раздел 6</a></li>
+                <li><a href="#">Раздел 7</a></li>
+            </ol>
+        </section>
+        <!-- Неупорядоченный список токсичных вещей с маркерами из символов юникода и фоновых изображений (нет фоновой картинки)-->
+        <ul class="toxic_markers">
+            <li class="toxic_markers__item">Яды</li>
+            <li class="toxic_markers__item">Продукты распада</li>
+            <li class="toxic_markers__item">Отходы химического производства</li>
+            <li>Бывшие друзья</li>
+        </ul>
+
+        <!-- Список с автоматически поставленными цифрами для элементов -->
+        <h1 class="games_counter">Игры для компании</h1>
+        <ul class="games_counter__items">
+            <li class="games_counter__item">
+                <h2 class="games_counter__title">Мафия</h2>
+                <p class="games_counter__text">Цель мафиози – убивать игроков ночью и казнить днём, выдавая себя за положительных героев. Цель Граждан – найти и казнить Мафию.</p>
+            </li>
+            <li class="games_counter__item">
+                <h2 class="games_counter__title">Шпион</h2>
+                <p class="games_counter__text">Цель игры - игрокам необходимо выявить шпиона, шпиону необходимо определить локацию.</p>
+            </li>
+            <li class="games_counter__item">
+                <h2 class="games_counter__title">Твистер</h2>
+                <p class="games_counter__text">Побеждает тот игрок, которому удастся устоять на поле, выполнив все приказы ведущего.</p>
+            </li>
+        </ul>
+
+        <!-- Если нужно прервать такой список, то надо сделать 2 списка и counter-reset: li; указать только в первом случае, а во последующих указывать номер с которого продолжается счетчик -->
+        <section class="example_counter2">
+            <ol class="example_counter2__items example_counter2__items-counter">
+                <li class="example_counter2-item">Верстаешь чуть-чуть</li>
+                <li class="example_counter2-item">Верстаешь хорошо</li>
+                <li class="example_counter2-item">Учишь JS</li>
+                <li class="example_counter2-item">Работаешь фронтенд-разработчиком</li>
+            </ol>
+
+            <div class="example_counter2__note">... уснуть часов на 5 ...</div>
+
+            <ol start="4" class="example_counter2__items">
+                <li class="example_counter2-item">Закончить писать статью</li>
+                <li class="example_counter2-item">Ложиться спать</li>
+            </ol>
+        </section>
+
+        <!-- Если сносок много их можно автоматически нумеровать, как мы делали в списках -->
+        <article class="footnotes-number">
+            <h2>Полезное</h2>
+            <p>Нумеровать сноски при разметке <a href="#html" class="footnote-label" id="html-ref">HTML</a> страницы нет необходимости.</p>
+            <p>Добавить нумерацию можно с помощью упорядоченного списка и <a href="#css" class="footnote-label" id="css-ref">CSS</a> <a href="#css-counters" class="footnote-label" id="css-counters-ref"> счётчика</a>.</p>
+            <footer>
+                <h3 class="visually-hidden" id="footnote-label">Сноски</h3>
+                <ol>
+                    <li id="html">HTML (от англ. HyperText Markup Language — «язык гипертекстовой разметки») — стандартизированный язык разметки документов во Всемирной паутине. Большинство веб-страниц содержат описание разметки на языке HTML. Язык HTML интерпретируется
+                        браузерами; полученный в результате интерпретации форматированный текст отображается на экране монитора компьютера или мобильного устройства. <a href="#html-ref" class="back">↩</a></li>
+                    <li id="css">CSS (англ. Cascading Style Sheets — каскадные таблицы стилей) — формальный язык описания внешнего вида документа, написанного с использованием языка разметки.<a href="#css-ref" class="back">↩</a></li>
+                    <li id="css-counters">CSS счётчики — переменные CSS, значения которых могут быть инкрементированы при помощи CSS для отслеживания количества их использования. Они позволяют регулировать внешний вид контента, основываясь на его местоположении в документе.
+                        <a
+                            href="#css-counters-ref" class="back">↩</a>
+                    </li>
+                </ol>
+            </footer>
+        </article>
+
+</body>
+
+</html>
