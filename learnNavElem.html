@@ -11,132 +11,280 @@
 </head>
 
 <body>
+
+    <!-- Пример верстки шапки для лендинка с якорями. Выглядеть обратная часть якоря в нашем случае будет так: id="composition"; id="feedback"; id="price". -->
+    <header class="example-ancor">
+        <div class="example-ancor__container">
+            <nav class="example-ancor__main-nav">
+                <a class="example-ancor__logo" href="/index.html">
+                    <img src="img/logo.svg" width="53" height="32" alt="Логотип">
+                    <span class="example-ancor__visually-hidden">Наверх</span>
+                </a>
+                <p class="example-ancor__brand-description">Натуральный <br>кленовый сироп</p>
+                <ul class="example-ancor__site-nav">
+                    <!-- У этих ссылок мы прописываем адрес заранее, он будет вести к ключу, зашитому в код соответствующих блоков -->
+                    <li><a class="example-ancor__nav-link" href="#composition">Состав</a></li>
+                    <li><a class="example-ancor__nav-link" href="#feedback">Отзывы</a></li>
+                    <li><a class="example-ancor__nav-link" href="#price">Цена</a></li>
+                </ul>
+                <div class="example-ancor__call-banner">
+                    <p>
+                        <span>8 999 888 77 66</span><br> звонок бесплатный
+                    </p>
+                </div>
+                <!-- Есть вероятность, что откроется новое окно, а не проктутится страница до формы заказа, поэтому не пишем конкретный адрес -->
+                <a class="example-ancor__button" href="#">Заказать</a>
+            </nav>
+        </div>
+        <article class="example-ancor__article">
+            <h1>7 мифов о программистах</h1>
+            <div class="example-ancor__article-container">
+                <p class="example-ancor__intro">Программирование — большой мир, в который страшно войти со стороны. Рассказываем, чего точно не стоит бояться, и помогаем развеять популярные мифы.</p>
+                <div class="example-ancor__article-menu">
+                    <h3>Содержание статьи</h3>
+                    <ol>
+                        <li><a href="#part-1">Программирование не для меня</a></li>
+                        <li><a href="#part-2">Страшно сделать ошибку</a></li>
+                        <li><a href="#part-3">Ошибка — конец света</a></li>
+                        <li><a href="#part-4">Сложно сделать первый проект</a></li>
+                        <li><a href="#part-5">Невозможно научиться самостоятельно</a></li>
+                        <li><a href="#part-6">Код можно никому не показывать</a></li>
+                        <li><a href="#part-7">Сразу после курсов платят по 200 тысяч в месяц</a></li>
+                    </ol>
+                </div>
+
+        </article>
+    </header>
+
+
+    <!-- Хлебные крошки
+    последний пункт сделали ссылкой, так как возможно  пользователи копируют в этом элементе ссылку на материал, чтобы сохранить себе или поделиться -->
+
+    <div class="a-breadcrumbs">
+        <ul class="a-breadcrumbs-list a-breadcrumbs-list-1">
+            <li>
+                <a class="a-breadcrumb-link" href="#"><img class="a-home-icon" src="img/home.svg" width="23" height="20" alt="Домашняя страница"></a>
+            </li>
+            <li><a class="a-breadcrumb-link" href="#">Каталог</a></li>
+            <li><a class="a-breadcrumb-link" href="#">Мебель для ванных комнат</a></li>
+            <li><a class="a-breadcrumb-link" href="#">Зеркала</a></li>
+            <li><a class="a-breadcrumb-link" href="#">Зеркало с подсветкой Magic Mirror FS2</a></li>
+        </ul>
+        <ul class="a-breadcrumbs-list a-breadcrumbs-list-2">
+            <li><a class="a-breadcrumb-link" href="#">Главная</a></li>
+            <li><a class="a-breadcrumb-link" href="#">Художественная литература</a></li>
+            <li><a class="a-breadcrumb-link" href="#">Фантастика</a></li>
+            <li><a class="a-breadcrumb-link" href="#">Рэй Брэдбери. «451 по Фаренгейту»</a></li>
+        </ul>
+        <ul class="a-breadcrumbs-list a-breadcrumbs-list-3">
+            <li><a class="a-breadcrumb-link" href="#">Главная</a></li>
+            <li><a class="a-breadcrumb-link" href="#">Художественная литература</a></li>
+            <li><a class="a-breadcrumb-link" href="#">Фантастика</a></li>
+            <li><a class="a-breadcrumb-link" href="#">Рэй Брэдбери. «451 по Фаренгейту»</a></li>
+        </ul>
+        <ul class="a-breadcrumbs-list a-breadcrumbs-list-4">
+            <li><a class="a-breadcrumb-link" href="#">Главная</a></li>
+            <li><a class="a-breadcrumb-link" href="#">Художественная литература</a></li>
+            <li><a class="a-breadcrumb-link" href="#">Фантастика</a></li>
+            <li><a class="a-breadcrumb-link" href="#">Рэй Брэдбери. «451 по Фаренгейту»</a></li>
+        </ul>
+    </div>
+
     <nav main-header__nav main-nav>
-        <ul class="main-nav__items">
-            <li class="main-nav__item">
-                <a class="main-nav__link" href="index.html">Home</a>
+        <ul class="main-nav__items ">
+            <li class="main-nav__item ">
+                <a class="main-nav__link " href="index.html ">Home</a>
             </li>
-            <li class="main-nav__item">
-                <a class="main-nav__link" href="#">Немного о себе</a>
+            <li class="main-nav__item ">
+                <a class="main-nav__link " href="# ">Немного о себе</a>
             </li>
-            <li class="main-nav__item">
-                <a class="main-nav__link" href="#">Навыки</a>
+            <li class="main-nav__item ">
+                <a class="main-nav__link " href="# ">Навыки</a>
             </li>
-            <li class="main-nav__item">
-                <a class="main-nav__link" href="#">Портфолио</a></li>
-            <li class="main-nav__item">
-                <a href="#">Контакты</a>
+            <li class="main-nav__item ">
+                <a class="main-nav__link " href="# ">Портфолио</a></li>
+            <li class="main-nav__item ">
+                <a href="# ">Контакты</a>
             </li>
-            <li class="main-nav__item">
-                <a href="my_html.html">cheatSheet</a>
+            <li class="main-nav__item ">
+                <a href="my_html.html ">cheatSheet</a>
             </li>
-            <li class="main-nav__item learnNavElem">
-                <a href="learnNavElem.html">learnNavElem</a>
+            <li class="main-nav__item learnNavElem ">
+                <a href="learnNavElem.html ">learnNavElem</a>
             </li>
         </ul>
     </nav>
 
-    <section class="footnotes-top">
-        <p class="footnotes-top-text">Повысьте юзабильность<sup><a href="#footnote-usability" id="ref-usability">1 (сноскa)<a></sup> текстовых элементов — помогите пользователю продраться через ваш текст.</p>
 
-        <section class="footnotes">
-            <p><a id="footnote-usability">1</a> — удобство для пользователя. <sup><a href="#ref-usability">обратно к материалу<a></sup>
+    <h2 id="part-1">1. Программирование не для меня</h2>
+    <p>У некоторых языков действительно очень высокий порог входа — не всегда даже понятно, с чего начать.</p>
+
+
+    <section class="footnotes-top ">
+        <p class="footnotes-top-text ">Повысьте юзабильность<sup><a href="#footnote-usability " id="ref-usability ">1 (сноскa)<a></sup> текстовых элементов — помогите пользователю продраться через ваш текст.</p>
+
+        <section class="footnotes ">
+            <p><a id="footnote-usability ">1</a> — удобство для пользователя. <sup><a href="#ref-usability ">обратно к материалу<a></sup>
         </section>
 
         <!-- CSS-свойство content для псевдоэлемента ::before
     - свойство counter-reset: outline; сбрасывает (инициализирует) значение счётчика и даёт ему имя outline;
     - свойство counter-increment: outline; — инкрементирует (увеличивает) счётчики (включая счётчики для вложенных списков);
-    - свойство content: counters(outline, ".") ". "; — добавляет с помощью counters(outline, ".") значения списков всех уровней вложенности, используя разделитель .. Строка с полученным номером «склеивается» со строкой ". " (точка и пробел), тем самым получаем номер вида: 3.2.1. Раздел 3.2.1. -->
+    - свойство content: counters(outline, ". ") ". "; — добавляет с помощью counters(outline, ". ") значения списков всех уровней вложенности, используя разделитель .. Строка с полученным номером «склеивается» со строкой ". " (точка и пробел), тем самым получаем номер вида: 3.2.1. Раздел 3.2.1. -->
 
-        <section class="auto_counter">
+        <section class="auto_counter ">
             <ol>
-                <li><a href="#">Раздел 1</a></li>
-                <li><a href="#">Раздел 2</a></li>
-                <li><a href="#">Раздел 3</a>
+                <li><a href="# ">Раздел 1</a></li>
+                <li><a href="# ">Раздел 2</a></li>
+                <li><a href="# ">Раздел 3</a>
                     <ol>
-                        <li><a href="#">Раздел 3.1</a></li>
-                        <li><a href="#">Раздел 3.2</a>
+                        <li><a href="# ">Раздел 3.1</a></li>
+                        <li><a href="# ">Раздел 3.2</a>
                             <ol>
-                                <li><a href="#">Раздел 3.2.1</a></li>
-                                <li><a href="#">Раздел 3.2.2</a></li>
-                                <li><a href="#">Раздел 3.2.3</a></li>
+                                <li><a href="# ">Раздел 3.2.1</a></li>
+                                <li><a href="# ">Раздел 3.2.2</a></li>
+                                <li><a href="# ">Раздел 3.2.3</a></li>
                             </ol>
                         </li>
-                        <li><a href="#">Раздел 3.3</a></li>
+                        <li><a href="# ">Раздел 3.3</a></li>
                     </ol>
                 </li>
-                <li><a href="#">Раздел 4</a></li>
-                <li><a href="#">Раздел 5</a>
+                <li><a href="# ">Раздел 4</a></li>
+                <li><a href="# ">Раздел 5</a>
                     <ol>
-                        <li><a href="#">Раздел 5.1</a></li>
-                        <li><a href="#">Раздел 5.2</a></li>
-                        <li><a href="#">Раздел 5.3</a></li>
+                        <li><a href="# ">Раздел 5.1</a></li>
+                        <li><a href="# ">Раздел 5.2</a></li>
+                        <li><a href="# ">Раздел 5.3</a></li>
                     </ol>
                 </li>
-                <li><a href="#">Раздел 6</a></li>
-                <li><a href="#">Раздел 7</a></li>
+                <li><a href="# ">Раздел 6</a></li>
+                <li><a href="# ">Раздел 7</a></li>
             </ol>
         </section>
         <!-- Неупорядоченный список токсичных вещей с маркерами из символов юникода и фоновых изображений (нет фоновой картинки)-->
-        <ul class="toxic_markers">
-            <li class="toxic_markers__item">Яды</li>
-            <li class="toxic_markers__item">Продукты распада</li>
-            <li class="toxic_markers__item">Отходы химического производства</li>
+        <ul class="toxic_markers ">
+            <li class="toxic_markers__item ">Яды</li>
+            <li class="toxic_markers__item ">Продукты распада</li>
+            <li class="toxic_markers__item ">Отходы химического производства</li>
             <li>Бывшие друзья</li>
         </ul>
 
         <!-- Список с автоматически поставленными цифрами для элементов -->
-        <h1 class="games_counter">Игры для компании</h1>
-        <ul class="games_counter__items">
-            <li class="games_counter__item">
-                <h2 class="games_counter__title">Мафия</h2>
-                <p class="games_counter__text">Цель мафиози – убивать игроков ночью и казнить днём, выдавая себя за положительных героев. Цель Граждан – найти и казнить Мафию.</p>
+        <h1 class="games_counter ">Игры для компании</h1>
+        <ul class="games_counter__items ">
+            <li class="games_counter__item ">
+                <h2 class="games_counter__title ">Мафия</h2>
+                <p class="games_counter__text ">Цель мафиози – убивать игроков ночью и казнить днём, выдавая себя за положительных героев. Цель Граждан – найти и казнить Мафию.</p>
             </li>
-            <li class="games_counter__item">
-                <h2 class="games_counter__title">Шпион</h2>
-                <p class="games_counter__text">Цель игры - игрокам необходимо выявить шпиона, шпиону необходимо определить локацию.</p>
+            <li class="games_counter__item ">
+                <h2 class="games_counter__title ">Шпион</h2>
+                <p class="games_counter__text ">Цель игры - игрокам необходимо выявить шпиона, шпиону необходимо определить локацию.</p>
             </li>
-            <li class="games_counter__item">
-                <h2 class="games_counter__title">Твистер</h2>
-                <p class="games_counter__text">Побеждает тот игрок, которому удастся устоять на поле, выполнив все приказы ведущего.</p>
+            <li class="games_counter__item ">
+                <h2 class="games_counter__title ">Твистер</h2>
+                <p class="games_counter__text ">Побеждает тот игрок, которому удастся устоять на поле, выполнив все приказы ведущего.</p>
             </li>
         </ul>
 
         <!-- Если нужно прервать такой список, то надо сделать 2 списка и counter-reset: li; указать только в первом случае, а во последующих указывать номер с которого продолжается счетчик -->
-        <section class="example_counter2">
-            <ol class="example_counter2__items example_counter2__items-counter">
-                <li class="example_counter2-item">Верстаешь чуть-чуть</li>
-                <li class="example_counter2-item">Верстаешь хорошо</li>
-                <li class="example_counter2-item">Учишь JS</li>
-                <li class="example_counter2-item">Работаешь фронтенд-разработчиком</li>
+        <section class="example_counter2 ">
+            <ol class="example_counter2__items example_counter2__items-counter ">
+                <li class="example_counter2-item ">Верстаешь чуть-чуть</li>
+                <li class="example_counter2-item ">Верстаешь хорошо</li>
+                <li class="example_counter2-item ">Учишь JS</li>
+                <li class="example_counter2-item ">Работаешь фронтенд-разработчиком</li>
             </ol>
 
-            <div class="example_counter2__note">... уснуть часов на 5 ...</div>
+            <div class="example_counter2__note ">... уснуть часов на 5 ...</div>
 
-            <ol start="4" class="example_counter2__items">
-                <li class="example_counter2-item">Закончить писать статью</li>
-                <li class="example_counter2-item">Ложиться спать</li>
+            <ol start="4 " class="example_counter2__items ">
+                <li class="example_counter2-item ">Закончить писать статью</li>
+                <li class="example_counter2-item ">Ложиться спать</li>
             </ol>
         </section>
 
         <!-- Если сносок много их можно автоматически нумеровать, как мы делали в списках -->
-        <article class="footnotes-number">
+        <article class="footnotes-number ">
             <h2>Полезное</h2>
-            <p>Нумеровать сноски при разметке <a href="#html" class="footnote-label" id="html-ref">HTML</a> страницы нет необходимости.</p>
-            <p>Добавить нумерацию можно с помощью упорядоченного списка и <a href="#css" class="footnote-label" id="css-ref">CSS</a> <a href="#css-counters" class="footnote-label" id="css-counters-ref"> счётчика</a>.</p>
+            <p>Нумеровать сноски при разметке <a href="#html " class="footnote-label " id="html-ref ">HTML</a> страницы нет необходимости.</p>
+            <p>Добавить нумерацию можно с помощью упорядоченного списка и <a href="#css " class="footnote-label " id="css-ref ">CSS</a> <a href="#css-counters " class="footnote-label " id="css-counters-ref "> счётчика</a>.</p>
+
             <footer>
-                <h3 class="visually-hidden" id="footnote-label">Сноски</h3>
+                <h3 class="visually-hidden " id="footnote-label ">Сноски</h3>
                 <ol>
-                    <li id="html">HTML (от англ. HyperText Markup Language — «язык гипертекстовой разметки») — стандартизированный язык разметки документов во Всемирной паутине. Большинство веб-страниц содержат описание разметки на языке HTML. Язык HTML интерпретируется
-                        браузерами; полученный в результате интерпретации форматированный текст отображается на экране монитора компьютера или мобильного устройства. <a href="#html-ref" class="back">↩</a></li>
-                    <li id="css">CSS (англ. Cascading Style Sheets — каскадные таблицы стилей) — формальный язык описания внешнего вида документа, написанного с использованием языка разметки.<a href="#css-ref" class="back">↩</a></li>
-                    <li id="css-counters">CSS счётчики — переменные CSS, значения которых могут быть инкрементированы при помощи CSS для отслеживания количества их использования. Они позволяют регулировать внешний вид контента, основываясь на его местоположении в документе.
-                        <a
-                            href="#css-counters-ref" class="back">↩</a>
+                    <li id="html ">HTML (от англ. HyperText Markup Language — «язык гипертекстовой разметки») — стандартизированный язык разметки документов во Всемирной паутине. Большинство веб-страниц содержат описание разметки на языке HTML. Язык HTML интерпретируется
+                        браузерами; полученный в результате интерпретации форматированный текст отображается на экране монитора компьютера или мобильного устройства. <a href="#html-ref " class="back ">↩</a></li>
+                    <li id="css ">CSS (англ. Cascading Style Sheets — каскадные таблицы стилей) — формальный язык описания внешнего вида документа, написанного с использованием языка разметки.<a href="#css-ref " class="back ">↩</a></li>
+                    <li id="css-counters ">CSS счётчики — переменные CSS, значения которых могут быть инкрементированы при помощи CSS для отслеживания количества их использования. Они позволяют регулировать внешний вид контента, основываясь на его местоположении в документе.
+                        <a href="#css-counters-ref " class="back ">↩</a>
                     </li>
                 </ol>
             </footer>
         </article>
+
+
+        <!-- Пример меню HTML-академии -->
+        <section class="example-menu ex ">
+            <div class="ex-container ">
+                <nav class="ex-main-nav ">
+                    <a class="ex-logo " href="/index.html ">
+                        <img src="img/logo_web.svg " width="112 " height="44 " alt="Логотип ">
+                        <span class="visually-hidden ">На главную</span>
+                    </a>
+                    <ul class="ex-site-nav ">
+                        <li><a class="ex-nav-link " href="# ">О нас</a></li>
+                        <li><a class="ex-nav-link ex-nav-link-current " href="# ">Цены</a></li>
+                        <li><a class="ex-nav-link " href="# ">Блог</a></li>
+                        <li><a class="ex-nav-link " href="# ">Контакты</a></li>
+                    </ul>
+                    <ul class="ex-user-nav ">
+                        <li><a class="ex-button ex-button-outline " href="# ">Войти</a></li>
+                        <li><a class="ex-button ex-button-filled " href="# ">Зарегистрироваться</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="ex-vertical-nav ">
+                <a class="ex-logo " href="/index.html ">
+                    <img src="img/logo.svg " width="85 " height="30 " alt="Логотип сайта ">
+                    <span class="visually-hidden ">На главную</span>
+                </a>
+                <ul class="ex-vertical-list ">
+                    <li><a href="# ">Рюкзаки</a></li>
+                    <li><a class="ex-nav-link-current " href="# ">Сумки</a></li>
+                    <li><a href="# ">Чемоданы</a></li>
+                    <li><a href="# ">Аксессуары</a></li>
+                    <li><a href="# ">Подарочные карты</a></li>
+                </ul>
+                <ul class="ex-vertical-list ">
+                    <li><a href="# ">Новая коллекция</a></li>
+                    <li><a href="# ">Бестселлеры</a></li>
+                    <li><a href="# ">Скидки и акции</a></li>
+                </ul>
+                <ul class="ex-vertical-socials ">
+                    <li>
+                        <a href="# ">
+                            <img src="img/twitter.svg " width="30 " height="30 " alt="Instagram ">
+                            <span class="visually-hidden ">Twitter</span>
+                            <!-- Социальные сети: иконка заменяет слово и читается однозначно, поэтому вставили как контентные изображения. 
+                            Удобнее для дальнейшего редактирования контент-менеджером -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="# ">
+                            <img src="img/facebook.svg " width="30 " height="30 " alt="Facebook ">
+                            <span class="visually-hidden ">Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="# ">
+                            <img src="img/vk.svg " width="30 " height="30 " alt="Vkontakte ">
+                            <span class="visually-hidden ">Vkontakte</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </section>
 
 </body>
 

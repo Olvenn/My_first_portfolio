@@ -1,177 +1,723 @@
-    .auto_counter ol {
-        list-style: none;
-        counter-reset: outline;
-        padding-left: 32px;
-    }
-    
-    .auto_counter ol li {
-        counter-increment: outline;
-    }
-    
-    .auto_counter ol li::before {
-        content: counters(outline, ".") ". ";
-        /* Добавляем значения всех уровней вложенности, используя разделитель '.' */
-    }
-    
-    .auto_counter a {
-        text-decoration: none;
-        font-family: "Montserrat", "Arial", sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 20px;
-        color: #0083ff;
-    }
-    
-    .auto_counter a:visited {
-        color: #8d00bf;
-    }
-    
-    .auto_counter a:hover {
-        color: #0063bf;
-        border-bottom: 1px solid #0063bf;
-        cursor: pointer;
-    }
-    
-    .auto_counter a:active {
-        padding: 10px;
-        border: 2px solid rgba(0, 131, 255, 0.4);
-        box-sizing: border-box;
-        border-radius: 2px;
-    }
-    
-    .toxic_markers {
-        list-style: none;
-        /* отключили стандартные буллиты */
-    }
-    
-    .toxic_markers__item {
-        position: relative;
-        width: 600px;
-        height: 80px;
-        padding-left: 100px;
-        margin-bottom: 20px;
-        font-family: "Montserrat", "Arial", sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 80px;
-        color: #333333;
-        background-color: #e8e8e8;
-    }
-    
-    .toxic_markers__item::before {
-        content: "\2623";
-        /* подключили буллиты в юникоде */
-        position: absolute;
-        top: -30px;
-        left: -50px;
-        display: inline-block;
-        /* их нужно стилизовать, в том числе указывать отступы */
-        width: 85px;
-        height: 85px;
-        margin: 27px;
-        font-size: 55px;
-        font-weight: 800;
-        line-height: 80px;
-        text-align: center;
-        color: white;
-        background-color: #333333;
-        border-radius: 50%;
-    }
-    
-    .games_counter {
-        font-size: 36px;
-        line-height: 1.4;
-    }
-    
-    .games_counter__title {
-        margin: 10px 0;
-        padding-left: 56px;
-        font-size: 24px;
-        line-height: 1.5;
-    }
-    
-    .games_counter__text {
-        margin: 0;
-    }
-    
-    .games_counter__items {
-        max-width: 600px;
-        padding: 0;
-        margin: 0;
-        counter-reset: list-counter;
-        list-style: none;
-    }
-    
-    .games_counter__item {
-        position: relative;
-        counter-increment: list-counter;
-        margin-bottom: 32px;
-    }
-    
-    .games_counter__item::before {
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        left: 0;
-        top: 0;
-        content: "0" counter(list-counter);
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 1.2;
-        text-align: center;
-        color: #ffffff;
-        background-color: #ffad0f;
-        border-radius: 4px;
-    }
-    
-    .example_counter2__items {
-        margin: 0;
-        padding: 30px;
-        list-style: none;
-        font-family: "Montserrat", "Arial", sans-serif;
-        font-style: normal;
-        font-weight: normal;
-    }
-    
-    .example_counter2__items-counter {
-        counter-reset: li;
-    }
-    
-    .example_counter2-item {
-        position: relative;
-        margin: 0 0 40px 2em;
-        padding: 8px 16px;
-        width: 522px;
-        counter-increment: li;
-        font-size: 24px;
-        line-height: 32px;
-        color: #333333;
-        border-bottom: 2px solid #39b54a;
-    }
-    
-    .example_counter2-item:last-child {
-        margin-bottom: 0;
-    }
-    
-    .example_counter2-item::before {
-        position: absolute;
-        top: -10px;
-        left: -1.5em;
-        width: 60px;
-        height: 60px;
-        content: counter(li);
-        font-weight: bold;
-        font-size: 40px;
-        line-height: 60px;
-        text-align: center;
-        color: #ffffff;
-        background-color: #39b54a;
-    }
-    
-    .example_counter2__note {
-        font-size: 24px;
-        margin-left: 100px;
-        background-color: aqua;
-    }
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.auto_counter ol {
+    list-style: none;
+    counter-reset: outline;
+    padding-left: 32px;
+}
+
+.auto_counter ol li {
+    counter-increment: outline;
+}
+
+.auto_counter ol li::before {
+    content: counters(outline, ".") ". ";
+    /* Добавляем значения всех уровней вложенности, используя разделитель '.' */
+}
+
+.auto_counter a {
+    text-decoration: none;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #0083ff;
+}
+
+.auto_counter a:visited {
+    color: #8d00bf;
+}
+
+.auto_counter a:hover {
+    color: #0063bf;
+    border-bottom: 1px solid #0063bf;
+    cursor: pointer;
+}
+
+.auto_counter a:active {
+    padding: 10px;
+    border: 2px solid rgba(0, 131, 255, 0.4);
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.toxic_markers {
+    list-style: none;
+    /* отключили стандартные буллиты */
+}
+
+.toxic_markers__item {
+    position: relative;
+    width: 600px;
+    height: 80px;
+    padding-left: 100px;
+    margin-bottom: 20px;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 80px;
+    color: #333333;
+    background-color: #e8e8e8;
+}
+
+.toxic_markers__item::before {
+    content: "\2623";
+    /* подключили буллиты в юникоде */
+    position: absolute;
+    top: -30px;
+    left: -50px;
+    display: inline-block;
+    /* их нужно стилизовать, в том числе указывать отступы */
+    width: 85px;
+    height: 85px;
+    margin: 27px;
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 80px;
+    text-align: center;
+    color: white;
+    background-color: #333333;
+    border-radius: 50%;
+}
+
+.games_counter {
+    font-size: 36px;
+    line-height: 1.4;
+}
+
+.games_counter__title {
+    margin: 10px 0;
+    padding-left: 56px;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.games_counter__text {
+    margin: 0;
+}
+
+.games_counter__items {
+    max-width: 600px;
+    padding: 0;
+    margin: 0;
+    counter-reset: list-counter;
+    list-style: none;
+}
+
+.games_counter__item {
+    position: relative;
+    counter-increment: list-counter;
+    margin-bottom: 32px;
+}
+
+.games_counter__item::before {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    top: 0;
+    content: "0" counter(list-counter);
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ffad0f;
+    border-radius: 4px;
+}
+
+.example_counter2__items {
+    margin: 0;
+    padding: 30px;
+    list-style: none;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.example_counter2__items-counter {
+    counter-reset: li;
+}
+
+.example_counter2-item {
+    position: relative;
+    margin: 0 0 40px 2em;
+    padding: 8px 16px;
+    width: 522px;
+    counter-increment: li;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333;
+    border-bottom: 2px solid #39b54a;
+}
+
+.example_counter2-item:last-child {
+    margin-bottom: 0;
+}
+
+.example_counter2-item::before {
+    position: absolute;
+    top: -10px;
+    left: -1.5em;
+    width: 60px;
+    height: 60px;
+    content: counter(li);
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #39b54a;
+}
+
+.example_counter2__note {
+    font-size: 24px;
+    margin-left: 100px;
+    background-color: aqua;
+}
+
+
+/* Пример меню */
+
+.example-menu {
+    min-width: 960px;
+    /* мы делаем фиксированный макет */
+    margin: 0;
+    /* сбросы не делали, так что убираем отступы тут */
+    /* Параметры шрифта указываем здесь, потому что они относятся ко всему макету целиком */
+    font-size: 16px;
+    line-height: 22px;
+    font-style: normal;
+    font-weight: normal;
+    color: #73a1a4;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    /* из-за того, что во всём макете выключено подчёркивание ссылок. На живых сайтах такого обычно не происходит */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    /* эти параметры нужны, чтобы картинки не теряли пропорции ни при каких обстоятельствах */
+}
+
+.ex-container {
+    max-width: 920px;
+    /* это наше рабочее пространство */
+    margin: 0 auto;
+    padding-right: 48px;
+    padding-left: 48px;
+    background-color: #ffffff;
+}
+
+
+/* Сетка */
+
+.ex-main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.ex-site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    /* очень важно для навигации оставлять возможности переполнения */
+}
+
+.ex-logo {
+    flex-shrink: 0;
+    /* логотип нельзя сжимать */
+}
+
+.ex-user-nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    /* пользовательскую навигацию тоже нельзя сжимать */
+}
+
+
+/* добавим отступы, внешние и внутренние, фоны, уберём буллиты */
+
+.ex-logo {
+    width: 176px;
+    margin-right: 60px;
+}
+
+.ex-site-nav {
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ex-site-nav li {
+    margin-right: 10px;
+}
+
+.ex-site-nav li:last-child {
+    margin-left: 5px;
+}
+
+.ex-nav-link-current {
+    color: #4f4f4f;
+    font-weight: 600;
+}
+
+.ex-user-nav {
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ex-user-nav li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+}
+
+
+/* стили ссылок, дополним сами ссылки настройками подключения этих состояний */
+
+.ex-logo {
+    opacity: 1;
+    transition: opacity 0.3s;
+    /* применяем к начальному состоянию, чтобы красивое изменение было как при подключении состояния, так и при отключении */
+}
+
+.ex-logo:hover,
+.ex-logo:focus {
+    opacity: 0.6;
+}
+
+.ex-nav-link {
+    display: block;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: opacity 0.3s;
+    color: inherit;
+    opacity: 1;
+}
+
+.ex-nav-link:hover,
+.ex-nav-link:focus {
+    opacity: 0.6;
+}
+
+.ex-button {
+    display: block;
+    max-width: 315px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 18px;
+    padding-left: 18px;
+    text-align: center;
+    border: 2px solid #03919a;
+    border-radius: 32px;
+}
+
+.ex-button-outline {
+    color: inherit;
+    background-color: inherit;
+    transition: color 0.3s, opacity 0.3s;
+}
+
+.ex-button-filled {
+    color: #f8f7fd;
+    background-color: #03919a;
+    transition: color 0.3s, background-color 0.3s;
+    /* Теоретически можно было написать all 0.3s, но это значение негативно влияет на скорость загрузки сайта и сложно расшифровывается */
+}
+
+.ex-button-filled:hover,
+.ex-button-filled:focus {
+    color: inherit;
+    background-color: inherit;
+}
+
+.ex-button-outline:hover,
+.ex-button-outline:focus {
+    color: #f8f7fd;
+    opacity: 0.6;
+    background-color: #03919a;
+}
+
+
+/* подчёркивание для актуального элемента */
+
+.ex-nav-link {
+    position: relative;
+}
+
+.ex-nav-link-current::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: -1px;
+    width: 120%;
+    height: 8px;
+    background-color: #adf5fa;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ex-main-nav-link:hover,
+.ex-main-nav-link:focus {
+    opacity: 0.6;
+    /* border-bottom: 1px solid #ffffff; — подчёркивание зоны клика */
+    /* background-color: #384461;
+  border-radius: 16px; — изменится фон, и края у него будут скруглены */
+}
+
+
+/* вертикальное меню */
+
+.ex-vertical-nav {
+    width: 200px;
+    background-color: brown;
+}
+
+.ex-vertical-nav ul {
+    list-style: none;
+}
+
+.ex-vertical-nav a {
+    display: block;
+    padding: 5px;
+    /* вот собственно увеличенная зона клика, со всех сторон */
+}
+
+.ex-vertical-list {
+    margin: 0;
+    /* вот отступы всего элемента */
+    padding-top: 16px;
+    padding-bottom: 9px;
+    padding-left: 18px;
+    position: relative;
+}
+
+
+/* разделители между разными тематическими списками */
+
+.ex-vertical-list::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -20px;
+    right: -20px;
+    bottom: -10px;
+    height: 2px;
+    background-color: #ffffff;
+    /* opacity: 0.3; */
+}
+
+
+/* Хлебные крошки */
+
+.a-breadcrumbs {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 23px;
+    padding: 0;
+}
+
+.a-breadcrumbs li {
+    display: inline;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.a-breadcrumb-link {
+    color: inherit;
+    /* цвет наследуется, указываем, чтобы он не был стандартным синим */
+    text-decoration: none;
+    /* ссылка не подчёркивается */
+    opacity: 1;
+    /* непрозрачные ссылки в состоянии покоя */
+}
+
+.a-breadcrumb-link:hover,
+.a-breadcrumb-link:focus {
+    opacity: 0.6;
+    /* прозрачность меняется по наведению */
+}
+
+.a-breadcrumbs li:last-child {
+    opacity: 0.5;
+    /* последний li с родителем с классом breadcrumbs будет полупрозрачным */
+}
+
+
+/* .a-breadcrumbs li+li::before {
+    content: "";
+}
+«такой элемент, после которого идёт ещё один такой же элемент». */
+
+.a-breadcrumbs-list-1 li+li::before {
+    content: "/\00a0";
+    /* слеш дополнен неразрывным пробелом */
+    color: #0c3763;
+    /* цвет текста в данном случае применится к содержанию свойства content */
+}
+
+.a-breadcrumbs-list-2 li {
+    position: relative;
+    padding-right: 60px;
+}
+
+.a-breadcrumbs-list-2 li+li::before {
+    content: " → ";
+    position: absolute;
+    top: 0;
+    left: -35px;
+    font-size: inherit;
+    /* управляется по-прежнему как шрифт */
+    color: #e4b77d;
+}
+
+.a-breadcrumbs-list-3 li {
+    position: relative;
+    padding: 0 10px;
+}
+
+.a-breadcrumbs-list-3 li+li::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 9px;
+    width: 7px;
+    height: 7px;
+    /* transform: rotate(45deg); — это если ромбик*/
+    /* border-radius: 50%; — это кружочек */
+    background-color: #006528;
+}
+
+.a-breadcrumbs-list-4 li {
+    position: relative;
+    padding: 0 20px;
+}
+
+.a-breadcrumbs-list-4 li+li::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -7px;
+    width: 12px;
+    height: 12px;
+    background-image: url("img/play-button.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px 12px;
+}
+
+
+/* Пример верстки шапки для лендинка с якорями */
+
+.example-ancor {
+    min-width: 960px;
+    margin: 0;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    font-style: normal;
+    font-weight: 600;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* То, что скрыто. Мы скрываем в основном то, что нужно только для доступности, вроде описания ссылки с логотипа наверх */
+
+.example-ancor__visually-hidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+
+/* Контейнер, ограничивающий фиксированный макет */
+
+.example-ancor__container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #f8eee4;
+}
+
+
+/* Выбрали метод построения сетки */
+
+.example-ancor__main-nav {
+    display: flex;
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.example-ancor__main-nav p {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+
+/* Описали ссылки только для этого блока */
+
+.example-ancor__main-nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.example-ancor__main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.example-ancor__brand-description {
+    line-height: 1em;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+/* Стилизуем кнопки только для этого блока */
+
+.example-ancor__main-nav .example-ancor__button {
+    display: block;
+    max-width: 120px;
+    /* чтобы сетка не сломалась, ограничим размер кнопки */
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 16px;
+    padding-left: 16px;
+    text-align: center;
+    color: #f8f7fd;
+    background-color: #f85c2b;
+    transition: opacity 0.3s, color 0.3s, background-color 0.3s;
+    /* можно было написать all 0.3s, но это неэффективное свойство и им непросто управлять */
+}
+
+.example-ancor__button:hover,
+.example-ancor__button:focus {
+    color: #f8f7fd;
+    opacity: 0.6;
+    background-color: rgba(248, 91, 43, 0.4);
+}
+
+.example-ancor__site-nav {
+    margin-left: 90px;
+}
+
+.example-ancor__site-nav a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    /* стараемся не использовать глобальные свойства: они хуже читаются и ими сложнее управлять */
+}
+
+
+/* Блок с телефоном */
+
+.example-ancor__call-banner {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    align-items: center;
+    position: relative;
+    padding-right: 20px;
+    padding-left: 60px;
+}
+
+.example-ancor__call-banner::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    background-image: url("assets/call_3m.svg");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.example-ancor__call-banner span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #f85c2b;
+}
+
+.example-ancor__article-menu ol {
+    margin-bottom: 30px;
+    padding: 0;
+    list-style: none;
+    counter-reset: num;
+    /* отключили текущую нумерацию */
+}
+
+.example-ancor__article-menu li {
+    position: relative;
+    counter-increment: num;
+    /* подключили счётчик в нужном месте и теперь можем настраивать */
+    margin-bottom: 15px;
+    font-family: "Merriweather", "Book Antiqua", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #5a6eb6;
+}
+
+.example-ancor__article-menu li::before {
+    content: counter(num) ".";
+    /* включили номера и точки поставили после номеров */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.example-ancor__article a {
+    color: inherit;
+    display: inline-block;
+    padding-left: 23px;
+    /* сделали увеличенную зону клика, чтобы было удобнее в неё попадать и чтобы её подчеркнуть */
+    border-bottom: 1px dashed #5A6EB6;
+    text-decoration: none;
+}
