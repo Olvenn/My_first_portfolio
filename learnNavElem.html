@@ -12,6 +12,33 @@
 
 <body>
 
+    <nav main-header__nav main-nav>
+        <ul class="main-nav__items ">
+            <li class="main-nav__item ">
+                <a class="main-nav__link " href="index.html ">Home</a>
+            </li>
+            <li class="main-nav__item ">
+                <a class="main-nav__link " href="# ">Немного о себе</a>
+            </li>
+            <li class="main-nav__item ">
+                <a class="main-nav__link " href="# ">Навыки</a>
+            </li>
+            <li class="main-nav__item ">
+                <a class="main-nav__link " href="# ">Портфолио</a></li>
+            <li class="main-nav__item ">
+                <a href="# ">Контакты</a>
+            </li>
+            <li class="main-nav__item ">
+                <a href="my_html.html ">cheatSheet</a>
+            </li>
+            <li class="main-nav__item learnNavElem ">
+                <a href="learnNavElem.html ">learnNavElem</a>
+            </li>
+            <li class="main-nav__keisNav keisNav">
+                <a href="keis.html">Навигация Keises</a>
+            </li>
+        </ul>
+    </nav>
     <!-- Пример верстки шапки для лендинка с якорями. Выглядеть обратная часть якоря в нашем случае будет так: id="composition"; id="feedback"; id="price". -->
     <header class="example-ancor">
         <div class="example-ancor__container">
@@ -90,30 +117,6 @@
         </ul>
     </div>
 
-    <nav main-header__nav main-nav>
-        <ul class="main-nav__items ">
-            <li class="main-nav__item ">
-                <a class="main-nav__link " href="index.html ">Home</a>
-            </li>
-            <li class="main-nav__item ">
-                <a class="main-nav__link " href="# ">Немного о себе</a>
-            </li>
-            <li class="main-nav__item ">
-                <a class="main-nav__link " href="# ">Навыки</a>
-            </li>
-            <li class="main-nav__item ">
-                <a class="main-nav__link " href="# ">Портфолио</a></li>
-            <li class="main-nav__item ">
-                <a href="# ">Контакты</a>
-            </li>
-            <li class="main-nav__item ">
-                <a href="my_html.html ">cheatSheet</a>
-            </li>
-            <li class="main-nav__item learnNavElem ">
-                <a href="learnNavElem.html ">learnNavElem</a>
-            </li>
-        </ul>
-    </nav>
 
 
     <h2 id="part-1">1. Программирование не для меня</h2>
@@ -285,6 +288,87 @@
             </nav>
 
         </section>
+
+        <footer>
+            <div class="footer-inner">
+                <div class="footer__contacts">
+                    <!-- Блок контактов и блок меню будут расположены в два столбца -->
+                    <a class="footer__logo" href="/index.html">
+                        <img src="img/logo_web.svg" width="156" height="22" alt="Логотип">
+                        <span class="visually-hidden">На главную</span>
+                        <!-- Мы на всякий случай указываем в скрытом виде описание ссылки — поможет сделать информацию более доступной -->
+                    </a>
+                    <ul class="footer__nav-list">
+                        <li><a href="#">Зарегистрироваться</a></li>
+                        <li><a href="#">Войти в аккаунт</a></li>
+                    </ul>
+                </div>
+                <dl class="footer__footer-nav">
+                    <div>
+                        <dt>Продукты</dt>
+                        <dd>
+                            <ul class="footer__nav-list">
+                                <li><a href="#">Облачный хостинг</a></li>
+                                <li><a href="#">Тарифы и цены</a></li>
+                                <li><a href="#">OpenSource решения</a></li>
+                                <li><a href="#">Для компаний</a></li>
+                            </ul>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>О компании</dt>
+                        <dd>
+                            <ul class="footer__nav-list">
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">Блог</a></li>
+                                <li><a href="#">Корпоративная культура</a></li>
+                                <li><a href="#">Вакансии</a></li>
+                            </ul>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>Поддержка</dt>
+                        <dd>
+                            <ul class="footer__nav-list">
+                                <li><a href="#">Центр помощи</a></li>
+                                <li><a href="#">Связаться с консультантом</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Сообщить об ошибке</a></li>
+                            </ul>
+                        </dd>
+                    </div>
+                </dl>
+                <div class="footer__footer-bottom">
+                    <ul class="footer__socials">
+                        <li>
+                            <a href="#">
+                                <img src="img/twitter.svg" width="16" height="16" alt="Twitter">
+                                <span class="visually-hidden">Twitter</span>
+                                <!-- Социальные сети мы верстаем как контентную картинку со скрытым объяснением, потому что здесь иконка читается однозначно и используется как общепонятный знак -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/facebook.svg" width="10" height="20" alt="Facebook">
+                                <span class="visually-hidden">Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/vk.svg" width="17" height="11" alt="Vkontakte">
+                                <span class="visually-hidden">Vkontakte</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="footer__terms">
+                        <li><a href="#">Условия использования</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                        <li><a href="#">Лицензия</a></li>
+                    </ul>
+                    <p class="footer__copyright">2020 © ПАО Сибирь Банк</p>
+                </div>
+            </div>
+        </footer>
 
 </body>
 

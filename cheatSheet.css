@@ -1804,3 +1804,121 @@ input:required {}
             background-color: #ffad0f;
             border-radius: 4px;
         }
+        /* Гриды начало */
+        
+        .grid__start-elems {
+            display: grid;
+            grid-template-columns: 125px 125px 125px 125px;
+            grid-template-rows: 125px 125px 125px 125px;
+        }
+        
+        .grid__start-elem {}
+        
+        .grid__start-elem_1 {
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            border: 5px solid rgb(6, 6, 88);
+            z-index: 1;
+        }
+        
+        .grid__start-elem_2 {
+            grid-row-start: 4;
+            grid-row-end: 5;
+            grid-column-start: 1;
+            grid-column-end: -1;
+            border: 3px solid rgb(6, 6, 88);
+        }
+        
+        .grid__start-elem_3 {
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: -2;
+            border: 3px solid rgb(6, 6, 88);
+        }
+        
+        .grid__start-elem_4 {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            border: 3px solid rgb(6, 6, 88);
+        }
+        
+        .grid__start-elem_5 {
+            background-color: rgb(63, 63, 211);
+            grid-row-start: 1;
+            grid-row-end: -1;
+            grid-column-start: 1;
+            grid-column-end: -1;
+            opacity: 0.5;
+        }
+        
+        .grid__start-elem_6 {
+            background-color: rgb(199, 231, 184);
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            opacity: 0.5;
+        }
+        
+        .grid__start-elem_7 {
+            background-color: rgb(231, 184, 221);
+            grid-row-start: 1;
+            grid-row-end: -1;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            opacity: 0.5;
+        }
+        
+        .grid__area {
+            margin: 20px;
+        }
+        
+        .grid__area--elems {
+            display: grid;
+            width: 540px;
+            height: 405px;
+            gap: 20px;
+            grid-template-areas: "grass1 grass1 water1 rocks1" "rocks2 water2 grass2 rocks1" "rocks2 sand grass2 lava";
+        }
+        
+        .grid__area--element--1 {
+            grid-area: grass1;
+            background-color: green;
+        }
+        
+        .grid__area--element--2 {
+            grid-area: grass2;
+            background-color: greenyellow;
+        }
+        
+        .grid__area--element--3 {
+            grid-area: rocks1;
+            background-color: rgb(24, 22, 22);
+        }
+        
+        .grid__area--element--4 {
+            grid-area: rocks2;
+            background-color: rgb(187, 177, 177);
+        }
+        
+        .grid__area--element--5 {
+            grid-area: water1;
+            background-color: blue;
+        }
+        
+        .grid__area--element--6 {
+            background-color: blue;
+        }
+        
+        .grid__area--element--7 {
+            background-color: rgb(217, 255, 0);
+        }
+        
+        .grid__area--element--8 {
+            background-color: orangered;
+        }

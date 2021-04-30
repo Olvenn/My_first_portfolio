@@ -1,0 +1,242 @@
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+html {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0;
+    /*отступы не наследуются*/
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 18.75px;
+    font-weight: 400;
+    color: #000000;
+    /* text-transform: uppercase; */
+    /* background-color: #000000; */
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.header_wrapper {
+    background-color: #E5E5E5;
+    padding: 20px 98px;
+}
+
+.main-nav__img {
+    width: 79px;
+    height: 59px;
+}
+
+.main-nav__items,
+.main-nav__user {
+    list-style-type: none;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main-nav__user,
+.main-nav__items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-nav__logo {
+    margin-right: 17.5px;
+    flex-shrink: 0;
+    /* Чтобы не сжимался */
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.main-nav__logo:hover,
+.main-nav__logo:focus {
+    opacity: 0.3;
+}
+
+.main-nav__item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-nav__link {
+    display: block;
+    /* Чтобы работали паддинги у ссылок */
+    color: inherit;
+    padding: 10px 12.5px;
+    text-align: center;
+    border: 5px solid transparent;
+    /* Чтобы при наведении не прыгал текст из-за появления рамки */
+}
+
+.main-nav__link:hover {
+    border: 5px solid #0F00B6;
+}
+
+.main-nav__link--current {
+    color: #0F00B6;
+}
+
+.main-nav__button {
+    display: block;
+    max-width: 315px;
+    font-weight: 500;
+    padding: 12.5px 24px;
+}
+
+.main-nav__user {
+    margin-left: auto;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.main-nav__entry {
+    color: #161517;
+    border: 2px solid #0F00B6;
+    padding: 12.5px 24px;
+    margin-right: 25px;
+    margin-left: 25px;
+    /* Для того, чтобы при стыковке с левым элемнтом оставался пробел */
+    transition: color 1s, border-color 1s;
+}
+
+.main-nav__entry:hover,
+.main-nav__entry:focus {
+    color: #0F00B6;
+    border-color: #ffffff;
+}
+
+.main-nav__registration {
+    background-color: #0F00B6;
+    border: 2px solid #0F00B6;
+    color: #F8F7FD;
+    transition: color 1s, background-color 1s;
+}
+
+.main-nav__registration:hover,
+.main-nav__registration:focus {
+    background-color: #F8F7FD;
+    border: 2px solid #F8F7FD;
+    color: #0F00B6;
+}
+
+
+/* Footer */
+
+.footer {
+    max-width: 1370;
+    color: #1C1C1C;
+}
+
+.footer__wrap {
+    padding: 45px 98px 55px;
+    display: grid;
+    grid-template-columns: 374px 1fr;
+    background-color: #ffffff;
+}
+
+.footer__items {
+    list-style-type: none;
+}
+
+.footer__link {
+    color: inherit;
+}
+
+.footer__title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.footer__logo {
+    display: flex;
+}
+
+.footer__link--tel {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+.footer__tel-text {
+    font-size: 12px;
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__block {
+    margin-left: 0;
+}
+
+.footer__subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23px;
+    margin-bottom: 20px;
+}
+
+.footer__item {
+    margin-bottom: 15px;
+}
+
+.footer__bottom {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    border-top: 1px solid #000;
+    margin-top: 35px;
+}
+
+.footer__bottom p {
+    font-size: 12px;
+}
+
+.footer__confident {
+    margin-left: auto;
+}

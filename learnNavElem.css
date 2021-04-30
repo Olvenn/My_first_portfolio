@@ -721,3 +721,183 @@ img {
     border-bottom: 1px dashed #5A6EB6;
     text-decoration: none;
 }
+
+.footer-inner a {
+    text-decoration: none;
+    color: inherit;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+
+/* тут важно, что мы сейчас описываем только те ссылки, которые в нашем маленьком макете, а не на всём сайте. */
+
+.footer-inner a:hover,
+.footer-inner a:focus {
+    opacity: 0.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto 1fr;
+    /* блок с логотипом и навигация */
+    grid-gap: 20px 114px;
+    width: 960px;
+    /* у нас фиксированный макет */
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #2f3535;
+    color: #638d8f;
+}
+
+
+/* 
+.footer__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+} */
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__logo {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 22px;
+}
+
+.footer__logo img {
+    flex-shrink: 0;
+    /* нельзя сжимать именно картинку, а не ссылку */
+}
+
+.footer__footer-nav {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 30px;
+    justify-content: space-between;
+    margin-right: 50px;
+    margin-top: 0;
+    padding-top: 10px;
+    list-style: none;
+}
+
+.footer__footer-nav dd {
+    margin: 0;
+}
+
+.footer__footer-nav dt {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+}
+
+.footer__nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer__nav-list li {
+    list-style-type: none;
+}
+
+.footer__nav-list a {
+    padding: 3px;
+    /* расширенная во все стороны зона клика */
+}
+
+.footer__nav-list li {
+    margin-bottom: 15px;
+    /* вопрос ритма вёрстки */
+}
+
+.footer__footer-bottom {
+    grid-column-end: span 2;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 65px;
+}
+
+.footer__socials,
+.footer__terms {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-top: 5px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer__socials a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.footer__terms {
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__terms li {
+    position: relative;
+    /* для абсолютного позиционирования разделителей */
+}
+
+.footer__terms a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 14px;
+    padding-left: 14px;
+}
+
+
+/* разделители условий в нижней части футера */
+
+.footer__terms li+li::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    border: 2px solid #638d8f;
+    width: 2px;
+    height: 2px;
+    transform: rotate(45deg);
+}
+
+.footer__copyright {
+    justify-content: center;
+    margin-top: 16px;
+    margin-bottom: 0;
+    color: #638d8f;
+}
